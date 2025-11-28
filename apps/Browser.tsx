@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 const Browser: React.FC = () => {
-  // Defaulting to Bing as it often permits iframe embedding better than Google
-  const [url, setUrl] = useState('https://www.wikipedia.org');
-  const [inputUrl, setInputUrl] = useState(url);
-  const [isLoading, setIsLoading] = useState(false);
+  // Use a special Google URL that is more iframe-friendly
+  const [url, setUrl] = useState('https://www.google.com/webhp?igu=1');
+  const [inputUrl, setInputUrl] = useState('https://www.google.com');
+  const [isLoading, setIsLoading] = useState(true);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,7 +32,7 @@ const Browser: React.FC = () => {
             value={inputUrl}
             onChange={(e) => setInputUrl(e.target.value)}
             className="w-full px-4 py-1.5 rounded-full border border-gray-300 bg-[#f1f3f4] text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:bg-white transition-all shadow-inner"
-            placeholder="Search Google or type a URL"
+            placeholder="Search with Google or enter a URL"
           />
         </form>
       </div>
