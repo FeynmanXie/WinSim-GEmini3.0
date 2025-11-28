@@ -1,0 +1,5 @@
+{
+  "name": "WinWeb Sim",
+  "description": "A functional Windows-style desktop environment simulation with window management, taskbar, and productivity apps.",
+  "requestFramePermissions": []
+}
